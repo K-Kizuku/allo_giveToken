@@ -16,7 +16,7 @@ namespace giveToken
             _client = new HttpClient();
         }
         [FunctionName("giveToken")]
-        public void Run([TimerTrigger("0 25 1 * * *")] TimerInfo myTimer, ILogger log)
+        public void Run([TimerTrigger("0 35 1 * * *")] TimerInfo myTimer, ILogger log)
         {
             _client.GetAsync("https://app-backend-debug.azurewebsites.net/api/transaction/give");
         }
